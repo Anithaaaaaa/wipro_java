@@ -1,9 +1,14 @@
-package assignment2;
+package atm;
 
 public class Main {
+
 	public static void main(String[] args) {
-		Author a = new Author("abc","abc123@gmail.com",'M');
-		Book b = new Book("java", a, 299.99, 5);
-		b.display();
+		ATM atm=new ATM();
+		atm.withdraw(2000,1234);
+		atm.showBalance(1234);
+		atm.withdraw(5000,1111);
+		atm.showBalance(1111);
+
 	}
+
 }
