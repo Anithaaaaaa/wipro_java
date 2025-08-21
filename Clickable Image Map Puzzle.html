@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Clickable Image Map Puzzle</title>
+</head>
+
+<body>
+    <p>Hover around the center—two areas overlap with different links.</p>
+
+    <img src="https://via.placeholder.com/400x200?text=Image+Map" width="400" height="200" usemap="#puzzle" alt="Demo image map">
+    <map name="puzzle">
+  <!-- Overlapping rectangles: the one placed FIRST wins when areas overlap -->
+  <area shape="rect" coords="140,60,260,140" href="https://example.com/first" alt="First link">
+  <area shape="rect" coords="180,80,300,160" href="https://example.com/second" alt="Second link">
+</map>
+
+    <!-- Tip: Try clicking inside the overlap (roughly 180–260 x 80–140) -->
+</body>
+
+</html>

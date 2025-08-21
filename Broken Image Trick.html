@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Broken Image Trick</title>
+</head>
+
+<body>
+    <h2>Normal image</h2>
+    <img alt="Normal placeholder" src="https://via.placeholder.com/200x120" width="200" height="120">
+
+    <h2>Broken image (intentionally 404)</h2>
+    <img alt="Broken image" src="https://via.placeholder.com/does-not-exist.png" width="200" height="120">
+
+    <h2>Only loads in dark mode</h2>
+    <picture>
+        <!-- This source only applies when the OS/browser is in dark mode -->
+        <source media="(prefers-color-scheme: dark)" srcset="https://via.placeholder.com/200x120?text=Dark+Mode+Only">
+        <!-- Transparent 1x1 fallback (appears as “nothing” in light mode) -->
+        <img alt="Dark-mode-only image" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" width="200" height="120">
+    </picture>
+</body>
+
+</html>

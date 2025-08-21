@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Form Without Submit Button</title>
+    <style>
+        label {
+            display: block;
+            margin: .5rem 0 .2rem;
+        }
+        
+        input[type="text"],
+        input[type="password"] {
+            padding: .4rem;
+            width: 240px;
+        }
+        /* input[type=image] is allowed and submits the form */
+        
+        input[type="image"] {
+            margin-top: .8rem;
+            width: 140px;
+            height: 36px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="https://httpbin.org/post" method="post">
+        <label for="u">Username</label>
+        <input id="u" name="username" type="text" required>
+
+        <label for="p">Password</label>
+        <input id="p" name="password" type="password" required>
+
+        <!-- Not a button, not type=submit; still submits -->
+        <input type="image" alt="Submit" src="https://via.placeholder.com/140x36?text=Submit">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Fake Link Deception</title>
+    <style>
+        .fake-link {
+            color: #06c;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        
+        .fake-link:focus {
+            outline: 2px dotted;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        This is <span class="fake-link" role="link" tabindex="0" onclick="location.href='https://example.com'" onkeydown="if(event.key==='Enter'||event.key===' '){location.href='https://example.com'}">
+    a link-lookalike
+  </span> that isn’t an <code>&lt;a&gt;</code> tag.
+    </p>
+</body>
+
+</html>

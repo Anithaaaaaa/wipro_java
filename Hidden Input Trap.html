@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Hidden Input Trap</title>
+</head>
+
+<body>
+    <p>Submit the form — the next page will echo the hidden values back to you (HTML only, no JS).</p>
+
+    <form method="get" action="https://httpbin.org/get" target="_blank">
+        <!-- Visible fields -->
+        <label>
+    Your name:
+    <input name="name" required>
+  </label>
+
+        <!-- Hidden inputs -->
+        <input type="hidden" name="plan" value="Pro">
+        <input type="hidden" name="promo" value="WELCOME10">
+
+        <button>Submit</button>
+    </form>
+
+    <p>On the result page, look under the JSON “args” keys to see the hidden values.</p>
+</body>
+
+</html>

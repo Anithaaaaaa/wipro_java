@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Invisible Table Challenge</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 360px;
+        }
+        
+        td {
+            padding: 18px;
+            text-align: center;
+        }
+        /* No borders/lines anywhere */
+        
+        table,
+        td,
+        a {
+            border: 0;
+            outline: 0;
+        }
+        /* Make links fill the whole cell for easier clicking */
+        
+        td a {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            padding: 18px;
+        }
+        
+        td a:focus,
+        td a:hover {
+            text-decoration: underline;
+        }
+        /* Subtle background on hover just to prove they're clickable (remove if you want) */
+        
+        td:hover {
+            background: rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td><a href="#cell-1">Cell 1</a></td>
+            <td><a href="#cell-2">Cell 2</a></td>
+            <td><a href="#cell-3">Cell 3</a></td>
+        </tr>
+        <tr>
+            <td><a href="#cell-4">Cell 4</a></td>
+            <td><a href="#cell-5">Cell 5</a></td>
+            <td><a href="#cell-6">Cell 6</a></td>
+        </tr>
+        <tr>
+            <td><a href="#cell-7">Cell 7</a></td>
+            <td><a href="#cell-8">Cell 8</a></td>
+            <td><a href="#cell-9">Cell 9</a></td>
+        </tr>
+    </table>
+</body>
+
+</html>

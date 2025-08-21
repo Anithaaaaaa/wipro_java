@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Nested List Illusion</title>
+    <style>
+        /* Make lists look like a single inline paragraph */
+        
+        .inline-list,
+        .inline-list li,
+        .inline-list ul,
+        .inline-list ol {
+            display: inline;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        /* Add spacing punctuation to mimic natural text flow */
+        
+        .inline-list li::after {
+            content: " ";
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        <!-- Semantically an ordered list containing an unordered list, but visually a paragraph -->
+        <ol class="inline-list">
+            <li>This sentence is actually a list,</li>
+            <li>which even
+                <ul class="inline-list">
+                    <li>contains</li>
+                    <li>a nested</li>
+                    <li>unordered list</li>
+                </ul>
+                in the middle,</li>
+            <li>yet it reads like one smooth paragraph.</li>
+        </ol>
+    </p>
+</body>
+
+</html>
